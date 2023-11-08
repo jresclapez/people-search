@@ -1,0 +1,135 @@
+.knowler-people-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 305px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: rgba(182, 250, 178, 0.646) 0px 0px 9px 0px;
+  @media (min-width: 500px) {
+    width: 350px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px;
+    gap: 12px;
+  }
+  &__image {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    align-items: center;
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    gap: 7px;
+    font-weight: 600;
+    max-width: 305px;
+    text-align: center;
+
+    &_main {
+      overflow: hidden;
+      font-size: 18px;
+      color: #333333;
+      width: 100%;
+      white-space: inherit;
+      text-overflow: ellipsis;
+    }
+    &_secondary {
+      overflow: hidden;
+      font-size: 14px;
+      color: #333333;
+      white-space: inherit;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-weight: 400;
+    line-height: 1.2;
+    overflow: hidden;
+    font-size: 12px;
+    color: #666666;
+    margin-top: 4px;
+    max-width: 305px;
+    text-wrap: wrap;
+    text-align: center;
+
+    &_location {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333333;
+      gap: 6px;
+      font-weight: 600;
+      & svg {
+        color: #666666;
+      }
+    }
+  }
+  &__footer {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #f4f4f4;
+
+    & div:nth-child(n) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      & svg {
+        color: #6886c1;
+        cursor: pointer;
+      }
+      & img {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+    & div:nth-child(2),
+    & div:nth-child(3),
+    & div:nth-child(4) {
+      border-left: 1px solid #f4f4f4;
+    }
+
+    &_spinner {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      animation: rotate 2s linear infinite;
+      & .path {
+        stroke: #6886c1;
+        stroke-linecap: round;
+        animation: dash 1.5s ease-in-out infinite;
+      }
+    }
+  }
+}
